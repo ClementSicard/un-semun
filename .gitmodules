@@ -1,0 +1,3 @@
+[submodule "un-semun-api"]
+	path = un-semun-api
+	url = https://github.com/ClementSicard/un-semun-api
