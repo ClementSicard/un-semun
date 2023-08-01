@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  un-semun-api:
+    build:
+      context: ./un-semun-api
+      dockerfile: Dockerfile
+    ports:
+      - "${UN_SEMUN_API_PORT}:80"
+    depends_on:
+      graphdb:
+        condition: service_healthy
+    restart: on-failure
+    volumes:
+      - un-semun-api-data:/var/lib/un-semun-api
+
+  un-ml-pipeline:
+    build:
+      context: ./un-ml-pipeline
+      dockerfile: docker/ml-pipeline.dockerfile
+    ports:
+      - "${UN_ML_PIPELINE_PORT}:80"
+    depends_on:
+      graphdb:
+        condition: service_healthy
+    restart: on-failure
+    volumes:
+      - un-ml-pipeline-data:/var/lib/un-ml-pipeline
+
+  graphdb:
+    image: neo4j:5.10.0-community
+    ports:
+      - "${GRAPHDB_HTTP_PORT}:7474"
+      - "${GRAPHDB_BOLT_PORT}:7687"
+    volumes:
+      - ${GRAPHDB_DATA_PATH}:/data
+    environment:
+      - NEO4J_AUTH=none
+    healthcheck:
+      test:
+        ["CMD-SHELL", "echo 'RETURN 1' | cypher-shell -u neo4j -p '' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  un-semun-api-data:
+  un-ml-pipeline-data:
