@@ -39,10 +39,24 @@ services:
     healthcheck:
       test:
         ["CMD-SHELL", "echo 'RETURN 1' | cypher-shell -u neo4j -p '' || exit 1"]
-      interval: 30s
+      interval: 10s
       timeout: 10s
       retries: 3
 
+  un-semun-frontend:
+    build:
+      context: ./un-semun-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${UN_SEMUN_FRONTEND_PORT}:5001"
+    depends_on:
+      - un-semun-api
+      - neo4j
+    restart: on-failure
+    volumes:
+      - un-semun-frontend-data:/var/lib/un-semun-frontend-data
+
 volumes:
   un-semun-api-data:
+  un-semun-frontend-data:
   un-ml-pipeline-data:
