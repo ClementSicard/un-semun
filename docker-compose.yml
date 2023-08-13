@@ -7,6 +7,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "${UN_SEMUN_API_PORT}:80"
+    environment:
+      # Make sure you set the correct UN_API env variable value in the shell
+      # from which you run docker-compose up.
+      - UN_API
     depends_on:
       neo4j:
         condition: service_healthy
@@ -20,6 +24,7 @@ services:
       dockerfile: docker/ml-pipeline.dockerfile
     ports:
       - "${UN_ML_PIPELINE_PORT}:80"
+
     depends_on:
       neo4j:
         condition: service_healthy
@@ -42,19 +47,6 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-
-  un-semun-frontend:
-    build:
-      context: ./un-semun-frontend
-      dockerfile: Dockerfile
-    ports:
-      - "${UN_SEMUN_FRONTEND_PORT}:5001"
-    depends_on:
-      - un-semun-api
-      - neo4j
-    restart: on-failure
-    volumes:
-      - un-semun-frontend-data:/var/lib/un-semun-frontend-data
 
 volumes:
   un-semun-api-data:
