@@ -11,6 +11,7 @@ services:
       # Make sure you set the correct UN_API env variable value in the shell
       # from which you run docker-compose up.
       - UN_API
+      - GRAPHDB_URL=neo4j
     depends_on:
       neo4j:
         condition: service_healthy
