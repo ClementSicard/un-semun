@@ -32,6 +32,8 @@ services:
     restart: on-failure
     volumes:
       - un-ml-pipeline-data:/var/lib/un-ml-pipeline
+    environment:
+      - GRAPHDB_URL=neo4j
 
   neo4j:
     image: neo4j:5.10.0-community
