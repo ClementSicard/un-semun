@@ -34,6 +34,7 @@ services:
       - un-ml-pipeline-data:/var/lib/un-ml-pipeline
     environment:
       - GRAPHDB_URL=neo4j
+      - UN_API
 
   neo4j:
     image: neo4j:5.10.0-community
