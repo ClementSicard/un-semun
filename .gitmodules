@@ -10,3 +10,9 @@ url = https://github.com/ClementSicard/un-unbist-graph-ui
 [submodule "un-semun-misc"]
 path = un-semun-misc
 url = https://github.com/ClementSicard/un-semun-misc
+[submodule "un-semun-frontend"]
+path = un-semun-frontend
+url = https://github.com/ClementSicard/un-semun-frontend
+[submodule "un-semun-front"]
+	path = un-semun-front
+	url = https://github.com/ClementSicard/un-semun-front
