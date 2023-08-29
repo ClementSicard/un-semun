@@ -19,6 +19,21 @@ services:
     volumes:
       - un-semun-api-data:/var/lib/un-semun-api
 
+  un-semun-frontend:
+    build:
+      context: ./un-semun-front
+      dockerfile: Dockerfile
+    ports:
+      - "${UN_SEMUN_FRONTEND_PORT}:8080"
+    environment:
+      # Make sure you set the correct UN_API env variable value in the shell
+      # from which you run docker-compose up.
+      - UN_API
+      - GRAPHDB_URL=neo4j
+    depends_on:
+      - un-semun-api
+    restart: on-failure
+
   un-ml-pipeline:
     build:
       context: ./un-ml-pipeline
@@ -54,5 +69,4 @@ services:
 
 volumes:
   un-semun-api-data:
-  un-semun-frontend-data:
   un-ml-pipeline-data:
