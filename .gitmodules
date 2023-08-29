@@ -1,15 +1,12 @@
 [submodule "un-semun-api"]
-	path = un-semun-api
-	url = https://github.com/ClementSicard/un-semun-api
+path = un-semun-api
+url = https://github.com/ClementSicard/un-semun-api
 [submodule "un-ml-pipeline"]
-	path = un-ml-pipeline
-	url = https://github.com/ClementSicard/un-ml-pipeline
+path = un-ml-pipeline
+url = https://github.com/ClementSicard/un-ml-pipeline
 [submodule "un-unbist-graph-ui"]
-	path = un-unbist-graph-ui
-	url = https://github.com/ClementSicard/un-unbist-graph-ui
+path = un-unbist-graph-ui
+url = https://github.com/ClementSicard/un-unbist-graph-ui
 [submodule "un-semun-misc"]
-	path = un-semun-misc
-	url = https://github.com/ClementSicard/un-semun-misc
-[submodule "un-semun-frontend"]
-	path = un-semun-frontend
-	url = https://github.com/ClementSicard/un-semun-frontend
+path = un-semun-misc
+url = https://github.com/ClementSicard/un-semun-misc
