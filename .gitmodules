@@ -22,3 +22,6 @@ url = https://github.com/ClementSicard/un-semun-frontend
 [submodule "undl"]
 	path = undl
 	url = git@github.com:ClementSicard/undl.git
+[submodule "un-unbis-thesaurus-scraper"]
+	path = un-unbis-thesaurus-scraper
+	url = git@github.com:ClementSicard/un-unbis-thesaurus-scraper.git
