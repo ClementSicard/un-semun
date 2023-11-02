@@ -16,3 +16,6 @@ url = https://github.com/ClementSicard/un-semun-frontend
 [submodule "un-semun-front"]
 	path = un-semun-front
 	url = https://github.com/ClementSicard/un-semun-front
+[submodule "un-semun-paper"]
+	path = un-semun-paper
+	url = git@github.com:ClementSicard/un-semun-paper.git

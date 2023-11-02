@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Clément Sicard <csicard@ethz.ch>"]
 readme = "README.md"
-packages = [{include = "un_semun"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
