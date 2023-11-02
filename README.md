@@ -25,7 +25,7 @@ Repository for SemUN project. It is composed of a docker-compose stack, with:
 ### Description & Paper
 
 - To have more information on the project, please refer to the [project proposal](docs/project-proposal.pdf)
-- For more details about the final result, please refer to the [paper](un-semun-paper/paper.pdf)
+- For more details about the final result, please refer to the [paper](https://github.com/ClementSicard/un-semun-paper/blob/main/paper.pdf)
 
 ### Running the project
 
@@ -56,7 +56,7 @@ You are all set! 🎉
 
 ### Ingest documents using the ML pipeline API
 
-To ingest documents, you can use the ML pipeline API. You can find more information about it in the [`README.md`](un-ml-pipeline/README.md) of the `un-ml-pipeline` folder.
+To ingest documents, you can use the ML pipeline API. You can find more information about it in the [`README.md`](https://github.com/ClementSicard/un-ml-pipeline/blob/main/README.md) of the `un-ml-pipeline` folder.
 
 You basically need to send a `POST` request to the `/run` endpoint at URL `http://un-semun-api.un-semun.orb.local` with a JSON body containing the following fields:
 
