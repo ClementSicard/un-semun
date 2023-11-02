@@ -62,10 +62,10 @@ You basically need to send a `POST` request to the `/run` endpoint at URL `http:
 
 ```json
 [
-	{"recordId": "<record_id_0>"},
-	{"recordId": "<record_id_1>"},
+    {"recordId": "<record_id_0>"},
+    {"recordId": "<record_id_1>"},
     {"recordId": "<record_id_2>"},
-	...
+    ...
 ]
 ```
 
