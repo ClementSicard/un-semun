@@ -25,3 +25,6 @@ url = https://github.com/ClementSicard/un-semun-frontend
 [submodule "un-unbis-thesaurus-scraper"]
 	path = un-unbis-thesaurus-scraper
 	url = git@github.com:ClementSicard/un-unbis-thesaurus-scraper.git
+[submodule "un-semun-unbist-vis"]
+	path = un-semun-unbist-vis
+	url = git@github.com:ClementSicard/un-semun-unbist-vis.git
